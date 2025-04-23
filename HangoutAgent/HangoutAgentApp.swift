@@ -10,8 +10,11 @@ import SwiftUI
 @main
 struct HangoutAgentApp: App {
     var body: some Scene {
+        @StateObject var vm = ViewModel()
+        
         WindowGroup {
-            ContentView()
+            LoginView()
+                .environmentObject(vm)
         }
     }
 }
